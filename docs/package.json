@@ -1,0 +1,17 @@
+{
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.33"
+  },
+  "name": "docs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Henry Ji <41288155+HenryJi529@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}

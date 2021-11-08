@@ -1,0 +1,30 @@
+{
+	/****todo-tree****/
+	"todo-tree.filtering.excludeGlobs": [
+		"/env/**",
+		"**/node_modules",
+		"**/README.md",
+		"**/scripts/coverge",
+		"**/jquery-3.6.0.js",
+		"bootstrap.bundle.min.js.map",
+		"**/apps/blog/static/blog/js/highlight.js",
+	],
+	"todo-tree.general.tags": [
+		"TODO",
+		"FIXME",
+		"BUG",
+		// "NOTE",
+	],
+	/****liveSassCompile****/
+	"liveSassCompile.settings.formats": [
+		{
+			"extensionName": ".css",
+			"format": "compressed",
+		}
+	],
+	"liveSassCompile.settings.generateMap": false,
+	/***VSCode Counter***/
+	"VSCodeCounter.useGitignore": true,
+	"VSCodeCounter.outputPreviewType": "markdown",
+	"VSCodeCounter.history": 1,
+}

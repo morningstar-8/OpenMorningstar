@@ -1,0 +1,26 @@
+{
+	"appname": "video",
+	"lists": [
+		{
+			"name": "大明王朝1566",
+			"url":"https://www.youtube.com/watch?v=D9M-raooB9k&list=PLxU36BrYn1dY55YLAZDkeqnzmzr6olM4W"
+		},
+		{
+			"name": "走向共和",
+			"url":"https://www.youtube.com/watch?v=REh3sAovXuA&list=PL287PZ63qCjT7nllVwB2YdQAxRNpJ-gTl"
+		},
+		{
+			"name": "是首相",
+			"url":[
+				{
+					"season": "1",
+					"link": "https://www.nunuyy1.top/dianshiju/38356.html"
+				},
+				{
+					"season": "2",
+					"link": "https://www.nunuyy1.top/dianshiju/80774.html"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,163 @@
+{% load static %}
+{% load nav_extras %}
+<!DOCTYPE html>
+<html lang="en">
+<!--https://cdn.jsdelivr.net/gh/HenryJi529/OpenMorningstar@main/-->
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="refresh" content="1800;/">
+	<title>Nav - 晨星导航</title>
+	<link rel="shortcut icon" href="{% static 'nav/img/favicon.ico' %}" />
+	<!--https://fontawesome.com/v6.0/icons-->
+	<script src="https://kit.fontawesome.com/50c2c253e1.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="{% static 'nav/css/style.css' %}">
+	<!--https://icofont.com/icons-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HenryJi529/IcofontDemo@main/icofont.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+	<script src='https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js'></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css">
+</head>
+
+<body>
+	<div id="container">
+		<div id="headBar">
+			<div class="title">
+				晨星导航
+			</div>
+			<nav class="nav">
+				{% for catagory in categories %}
+				{% if catagory.level == "admin" %}
+				{% if request.user.is_superuser %}
+				<a href="#{{ catagory.id }}"><span class="{{ catagory.icon }}"> </span></a>
+				{% endif %}
+				{% else %}
+				<a href="#{{ catagory.id }}"><span class="{{ catagory.icon }}"> </span></a>
+				{% endif %}
+				{% endfor %}
+				<a href="{% url 'blog:contact' %}" target="_blank" class="email">
+					<span class="fa-solid fa-at"> </span></a>
+			</nav>
+		</div>
+
+		<div id="leftBar">
+			<div class="title">
+				晨星导航
+			</div>
+			<nav class="nav">
+				<ul class="nav-item" id="navItem">
+					{% for catagory in categories %}
+					{% if catagory.level == "admin" %}
+					{% if request.user.is_superuser %}
+					<li>
+						<a href="#{{ catagory.id }}">
+							<span class="{{ catagory.icon }}" style="font-weight: bold;"> {{ catagory.name }}</span></a>
+					</li>
+					{% endif %}
+					{% else %}
+					<li>
+						<a href="#{{ catagory.id }}">
+							<span class="{{ catagory.icon }}" style="font-weight: bold;"> {{ catagory.name }}</span></a>
+					</li>
+					{% endif %}
+					{% endfor %}
+				</ul>
+			</nav>
+			<div class="command">
+				{% if request.user.is_authenticated %}
+				<div class="username">
+					<span style="font-weight: bold;">username: </span>
+					<span style="font-weight: bold;color:rgb(160, 233, 233);">{{request.user.username}}</span>
+				</div>
+				{% endif %}
+				<a href="{% url 'blog:contact' %}" target="_blank" class="email">
+					<span class="fa-solid fa-at"> 留言</span></a>
+				{% if request.user.is_superuser %}
+				<a href="/admin" class="admin"><span class="icofont-key"> 管理</span></a>
+				{% else %}
+
+				{% if request.user.is_authenticated %}
+				<a href="#" class="switch"><span class="fa-solid fa-right-to-bracket edit"> 编辑</span></a>
+				{% else %}
+				<a href="/" class="login" target="_blank"><span class="icofont-login"> 登录</span></a>
+				{% endif %}
+
+				{% endif %}
+
+			</div>
+		</div>
+
+		<div id="main">
+			{% for catagory in categories %}
+			{% if catagory.level == "admin" %}
+			{% if request.user.is_superuser %}
+			<section class="box">
+				<a href="#" id="{{ catagory.id }}"></a>
+				<div class="category">
+					<span class="{{catagory.icon}}" style="font-weight: bold;"> {{catagory.name}}</span>
+				</div>
+				<div class="item-list">
+					{% for item in catagory.items %}
+					{% include 'nav/core.html' %}
+					{% endfor %}
+				</div>
+			</section>
+			{% endif %}
+			{% else %}
+
+			<section class="box">
+				<a href="#" id="{{ catagory.id }}"></a>
+				<div class="category">
+					<span class="{{catagory.icon}}" style="font-weight: bold;"> {{catagory.name}}</span>
+				</div>
+				{% if request.user.is_superuser %}
+				<div class="item-list">
+					{% for item in catagory.items %}
+					{% include 'nav/core.html' %}
+					{% endfor %}
+				</div>
+				{% else %}
+				<div class="item-list edit-mode" style="display: none;">
+					{% for item in catagory.items %}
+					{% if item.display != "false"%}
+					{% include 'nav/core.html' %}
+					{% endif %}
+					{% endfor %}
+				</div>
+				<div class="item-list display-mode" style="display: grid;">
+					{% for item in catagory.items %}
+					{% if item.display != "false"%}
+					{% if item.pk not in excludeList %}
+					{% include 'nav/core.html' %}
+					{% endif %}
+					{% endif %}
+					{% endfor %}
+				</div>
+				{% endif %}
+			</section>
+
+			{% endif %}
+			{% endfor %}
+
+			<footer>
+				<div class="copyright">
+					<span style="font-family: 'Lora';">Copyright © 2020 - 3020</span>
+					<a href="{% url 'nav:me'%}"><span style="font-family: 'Pacifico';">Henry Ji</span></a>
+				</div>
+			</footer>
+		</div>
+	</div>
+</body>
+<script data-href="https://github.com/HenryJi529/OpenMorningstar" src="{% static 'base/js/github.js'%}"></script>
+<script>
+	//django相关变量
+	const csrfToken = '{{ csrf_token }}';;
+	const excludeListLast = '{{ excludeList|toStr }}';
+</script>
+<script src="{% static 'nav/js/app.js' %}"></script>
+{% if request.user.is_superuser %}
+<script src="{% static 'nav/js/beta.js' %}"></script>
+{% endif %}
+
+</html>

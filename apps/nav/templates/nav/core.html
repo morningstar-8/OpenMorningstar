@@ -1,0 +1,20 @@
+<a class="item" target="_blank" href="{{item.url}}">
+	<div class="{% if item.image %} logo {% else %} no-logo {% endif %}">
+		{% if item.image %}
+		{% if item.image|slice:"0:4" == "http" %}
+		<img src="{{ item.image }}" alt="{{item.name}}的图片">
+		{% else %}
+		<img src="{% static item.image %}" alt="{{item.name}}的图片"
+			onerror="this.src='https://iph.href.lu/100x100?text=*&fg=666666&bg=cccccc'">
+		{% endif %}
+		{% endif %}
+		<div class="item-name"><abbr title="{{item.pk}}" style="text-decoration:none">{{item.name}}</abbr></div>
+		<div class="edits">
+			<span class="delete"><i class="delete-icon fa-solid fa-circle-minus"></i></span>
+			<span class="add"><i class="add-icon fa-solid fa-circle-plus"></i></span>
+		</div>
+	</div>
+	{% if item.desc %}
+	<div class="desc">{{item.desc}}</div>
+	{% endif %}
+</a>

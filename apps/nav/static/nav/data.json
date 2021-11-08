@@ -1,0 +1,1059 @@
+{
+	"appName": "nav",
+	"categories": [
+		{
+			"name": "我的作品",
+			"id": "work",
+			"icon": "icofont-rocket",
+			"items": [
+				{
+					"pk": "work-1",
+					"name": "在线画板",
+					"url": "https://online-canvas.vercel.app/",
+					"image": "https://online-canvas.vercel.app/favicon.png",
+					"desc": "一个简易的绘画玩具"
+				},
+				{
+					"pk": "work-2",
+					"name": "作品展示",
+					"url": "https://personal-portfolio-webpage-gamma.vercel.app/",
+					"image": "https://personal-portfolio-webpage-gamma.vercel.app/favicon.png",
+					"desc": "前端初学者的介绍页"
+				},
+				{
+					"pk": "work-3",
+					"name": "架子鼓",
+					"url": "https://drum-kit-topaz.vercel.app/",
+					"image": "https://drum-kit-topaz.vercel.app/favicon.png",
+					"desc": "在线架子鼓～"
+				},
+				{
+					"pk": "work-4",
+					"name": "仿星巴克官网",
+					"url": "https://starbucks-homepage.vercel.app/",
+					"image": "https://starbucks-homepage.vercel.app/favicon.ico",
+					"desc": "仿星巴克官网前端界面～"
+				},
+				{
+					"pk": "work-5",
+					"name": "设计师网址导航",
+					"url": "https://web-stack-page.vercel.app/",
+					"image": "https://web-stack-page.vercel.app/assets/images/favicon.png",
+					"desc": "基于WebStack的网址导航"
+				},
+				{
+					"pk": "work-6",
+					"name": "致敬页",
+					"url": "https://tribute-page-woad.vercel.app/",
+					"image": "https://tribute-page-woad.vercel.app/favicon.png",
+					"desc": "致敬那些伟大的同类～"
+				},
+				{
+					"pk": "work-7",
+					"name": "简易闹钟",
+					"url": "https://simple-clock-xi.vercel.app/",
+					"image": "https://simple-clock-xi.vercel.app/favicon.png",
+					"desc": "没有刻度更有型！"
+				},
+				{
+					"pk": "work-8",
+					"name": "调查问卷",
+					"url": "https://survey-form-lemon.vercel.app/",
+					"image": "https://survey-form-lemon.vercel.app/favicon.png",
+					"desc": "只有前端样式～"
+				},
+				{
+					"pk": "work-9",
+					"name": "音频播放器",
+					"url": "https://custom-video-player-eosin.vercel.app/",
+					"image": "https://custom-video-player-eosin.vercel.app/favicon.png",
+					"desc": "实现基础的播放控制～"
+				},
+				{
+					"pk": "work-10",
+					"name": "简易文档",
+					"url": "https://technical-documentation-page-puce.vercel.app/",
+					"image": "https://technical-documentation-page-puce.vercel.app/favicon.png",
+					"desc": "基础的单页文档～"
+				},
+				{
+					"pk": "work-11",
+					"name": "产品销售页",
+					"url": "https://product-landing-page-zeta.vercel.app/",
+					"image": "https://product-landing-page-zeta.vercel.app/favicon.png",
+					"desc": "长号在售！"
+				},
+				{
+					"pk": "work-12",
+					"name": "神兔相册",
+					"url": "https://morningstar529.com/album/",
+					"image": "/album/img/favicon.png",
+					"desc": "每日更新令人蚌埠住的图片"
+				},
+				{
+					"pk": "work-13",
+					"name": "晨星博客",
+					"url": "https://morningstar529.com/blog/",
+					"image": "/blog/img/favicon.png",
+					"desc": "专注于WEB开发与运维"
+				},
+				{
+					"pk": "work-14",
+					"name": "科学上网",
+					"url": "https://morningstar529.com/v2ray/",
+					"image": "/v2ray/img/favicon.png",
+					"desc": "提供私人与Ghelper线路"
+				},
+				{
+					"pk": "work-15",
+					"name": "在线投票",
+					"url": "https://morningstar529.com/poll/",
+					"image": "/poll/img/favicon.png",
+					"desc": "实现简单的投票与结果展示"
+				},
+				{
+					"pk": "work-16",
+					"name": "书单分享",
+					"url": "https://morningstar529.com/book/",
+					"image": "/book/img/favicon.png",
+					"desc": "只提供检索与下载功能"
+				}
+			]
+		},
+		{
+			"name": "项目管理",
+			"id": "admin",
+			"icon": "icofont-hammer-alt",
+			"level": "admin",
+			"items": [
+				{
+					"pk": "admin-1",
+					"name": "计算引擎",
+					"url": "https://console.cloud.google.com/compute/instances?project=crafty-nova-249804",
+					"image": "/nav/img/Admin/计算引擎.png",
+					"desc": "谷歌云虚拟机实例管理"
+				},
+				{
+					"pk": "admin-2",
+					"name": "赠金余额",
+					"url": "https://console.cloud.google.com/billing/01F49D-C2C9F1-6A2484",
+					"image": "/nav/img/Admin/赠金余额.png",
+					"desc": "谷歌云结算账号管理"
+				},
+				{
+					"pk": "admin-3",
+					"name": "域名配置",
+					"url": "https://ap.www.namecheap.com/Domains/DomainControlPanel/morningstar529.com/advancedns",
+					"image": "/nav/img/Admin/域名配置.png",
+					"desc": "NameCheap子域名配置"
+				},
+				{
+					"pk": "admin-4",
+					"name": "代码编辑",
+					"url": "https://code.morningstar529.com/",
+					"image": "/nav/img/Admin/代码编辑.png",
+					"desc": "通过code-server管理网站代码"
+				},
+				{
+					"pk": "admin-5",
+					"name": "容器管理",
+					"url": "https://portainer.morningstar529.com/#/home",
+					"image": "/nav/img/Admin/容器管理.png",
+					"desc": "通过portainer管理容器"
+				},
+				{
+					"pk": "admin-6",
+					"name": "反向代理",
+					"url": "https://frps.morningstar529.com",
+					"image": "/nav/img/Admin/反向代理.png",
+					"desc": "通过FRP反向代理"
+				},
+				{
+					"pk": "admin-7",
+					"name": "文件备份",
+					"url": "ftp://ftp.morningstar529.com",
+					"image": "/nav/img/Admin/文件备份.png",
+					"desc": "通过FTP实现备份"
+				},
+				{
+					"pk": "admin-8",
+					"name": "任务管理",
+					"url": "https://morningstar529.com/task/",
+					"image": "/nav/img/Admin/任务管理.png",
+					"desc": "通过Issue实现任务管理"
+				}
+			]
+		},
+		{
+			"name": "社区搜索",
+			"id": "community",
+			"icon": "icofont-ui-search",
+			"items": [
+				{
+					"pk": "community-1",
+					"name": "博客园",
+					"url": "https://www.cnblogs.com/",
+					"image": "/nav/img/Community/博客园.png",
+					"desc": "博客模式的技术分享社区"
+				},
+				{
+					"pk": "community-2",
+					"name": "思否",
+					"url": "https://segmentfault.com/",
+					"image": "/nav/img/Community/思否.png",
+					"desc": "中国版的StackOverFlow"
+				},
+				{
+					"pk": "community-3",
+					"name": "掘金",
+					"url": "https://juejin.cn/",
+					"image": "/nav/img/Community/掘金.png",
+					"desc": "页面比较清爽的优质平台"
+				},
+				{
+					"pk": "community-4",
+					"name": "V2EX",
+					"url": "https://www.v2ex.com/",
+					"image": "/nav/img/Community/V2EX.png",
+					"desc": "一个关于分享和探索的地方"
+				},
+				{
+					"pk": "community-5",
+					"name": "雪球",
+					"url": "https://xueqiu.com/",
+					"image": "/nav/img/Community/雪球.png",
+					"desc": "财经黑嘴都在这儿！"
+				},
+				{
+					"pk": "community-6",
+					"name": "知乎",
+					"url": "https://www.zhihu.com/",
+					"image": "/nav/img/Community/知乎.png",
+					"desc": "很多程序猿喜欢泡在这儿"
+				},
+				{
+					"pk": "community-7",
+					"name": "DEV社区",
+					"url": "https://dev.to/",
+					"image": "/nav/img/Community/DEV.png",
+					"desc": "优秀的国际开发者社区"
+				},
+				{
+					"pk": "community-8",
+					"name": "StackOverflow",
+					"url": "https://stackoverflow.com/",
+					"image": "/nav/img/Community/StackOverflow.png",
+					"desc": "国外编程相关的IT技术问答网站"
+				},
+				{
+					"pk": "community-9",
+					"name": "Fiverr",
+					"url": "https://www.fiverr.com/?source=top_nav",
+					"image": "/nav/img/Community/Fiverr.png",
+					"desc": "有品位的外包平台"
+				},
+				{
+					"pk": "community-10",
+					"name": "鱼C论坛",
+					"url": "https://fishc.com.cn/",
+					"image": "/nav/img/Community/FC.png",
+					"desc": "只为白鹤报恩～"
+				},
+				{
+					"pk": "community-11",
+					"name": "MATLAB中文社区",
+					"url": "https://www.ilovematlab.cn/",
+					"image": "/nav/img/Community/MatLab中文社区.png",
+					"desc": "可以赚点外快～"
+				},
+				{
+					"pk": "community-12",
+					"name": "LaTeX工作室",
+					"url": "https://ask.latexstudio.net/ask/",
+					"image": "/nav/img/Community/LaTex问答社区.png",
+					"desc": "新新Latex问答社区"
+				},
+				{
+					"pk": "community-13",
+					"name": "Github",
+					"url": "https://github.com/",
+					"image": "/nav/img/Community/Github.png",
+					"desc": "用于获取灵感的技术平台"
+				},
+				{
+					"pk": "community-14",
+					"name": "FCC论坛",
+					"url": "https://forum.freecodecamp.org/",
+					"image": "/nav/img/Community/FCCForum.png",
+					"desc": "正在养成的开发者聚集地"
+				},
+				{
+					"pk": "community-15",
+					"name": "Discord",
+					"url": "https://discord.com/guild-discovery",
+					"image": "/nav/img/Community/Discord.png",
+					"desc": "新型游戏、教育社区"
+				},
+				{
+					"pk": "community-16",
+					"name": "Medium",
+					"url": "https://medium.com/",
+					"image": "/nav/img/Community/Medium.png",
+					"desc": "优质文章大杂烩"
+				}
+			]
+		},
+		{
+			"name": "操作手册",
+			"id": "doc",
+			"icon": "icofont-search-document",
+			"items": [
+				{
+					"pk": "doc-1",
+					"name": "Git",
+					"url": "https://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html",
+					"image": "/nav/img/Manual/Git.png"
+				},
+				{
+					"pk": "doc-2",
+					"name": "Bash",
+					"url": "https://wsgzao.github.io/post/bash/",
+					"image": "/nav/img/Manual/Bash.png"
+				},
+				{
+					"pk": "doc-3",
+					"name": "Markdown",
+					"url": "https://www.w3cschool.cn/lme/ckdj1sng.html",
+					"image": "/nav/img/Manual/Markdown.png"
+				},
+				{
+					"pk": "doc-4",
+					"name": "Graphviz",
+					"url": "https://itopic.org/graphviz.html",
+					"image": "/nav/img/Manual/Dot.png",
+					"display": "false"
+				},
+				{
+					"pk": "doc-5",
+					"name": "GIMP",
+					"url": "https://docs.gimp.org/2.10/zh_CN/",
+					"image": "/nav/img/Manual/GIMP.png"
+				},
+				{
+					"pk": "doc-6",
+					"name": "Docker",
+					"url": "https://yeasy.gitbook.io/docker_practice/",
+					"image": "/nav/img/Manual/Docker.png"
+				},
+				{
+					"pk": "doc-7",
+					"name": "HTML",
+					"url": "https://man.ilovefishc.com/html5/",
+					"image": "/nav/img/Manual/HTML.png"
+				},
+				{
+					"pk": "doc-8",
+					"name": "CSS",
+					"url": "https://man.ilovefishc.com/css3/",
+					"image": "/nav/img/Manual/CSS.png"
+				},
+				{
+					"pk": "doc-9",
+					"name": "SASS",
+					"url": "https://sass.bootcss.com/documentation",
+					"image": "/nav/img/Manual/SASS.png"
+				},
+				{
+					"pk": "doc-10",
+					"name": "Javascript",
+					"url": "https://zh.javascript.info/",
+					"image": "/nav/img/Manual/JavaScript.png"
+				},
+				{
+					"pk": "doc-11",
+					"name": "ES6",
+					"url": "https://es6.ruanyifeng.com/",
+					"image": "/nav/img/Manual/ES6.png"
+				},
+				{
+					"pk": "doc-12",
+					"name": "jQuery",
+					"url": "https://jquery.cuishifeng.cn/",
+					"image": "/nav/img/Manual/jQuery.png"
+				},
+				{
+					"pk": "doc-13",
+					"name": "TypeScript",
+					"url": "https://ts.xcatliu.com/",
+					"image": "/nav/img/Manual/TypeScript.png",
+					"display": "false"
+				},
+				{
+					"pk": "doc-14",
+					"name": "Django",
+					"url": "https://docs.djangoproject.com/en/3.2/py-modindex/",
+					"image": "/nav/img/Manual/Django.png"
+				},
+				{
+					"pk": "doc-15",
+					"name": "NodeJS",
+					"url": "https://blog.poetries.top/node-learning-notes/",
+					"image": "/nav/img/Manual/NodeJS.png"
+				},
+				{
+					"pk": "doc-16",
+					"name": "Bootstrap",
+					"url": "https://v5.bootcss.com/",
+					"image": "/nav/img/Manual/Bootstrap.png"
+				},
+				{
+					"pk": "doc-17",
+					"name": "Vue",
+					"url": "https://v3.cn.vuejs.org/",
+					"image": "/nav/img/Manual/Vue.png"
+				},
+				{
+					"pk": "doc-18",
+					"name": "Vite",
+					"url": "https://cn.vitejs.dev/",
+					"image": "/nav/img/Manual/Vite.jpeg"
+				},
+				{
+					"pk": "doc-19",
+					"name": "React",
+					"url": "https://zh-hans.reactjs.org/docs/getting-started.html",
+					"image": "/nav/img/Manual/React.png",
+					"display": "false"
+				},
+				{
+					"pk": "doc-20",
+					"name": "Redux",
+					"url": "https://www.redux.org.cn/",
+					"image": "/nav/img/Manual/Redux.png",
+					"display": "false"
+				},
+				{
+					"pk": "doc-21",
+					"name": "MDN",
+					"url": "https://developer.mozilla.org/en-US/",
+					"image": "/nav/img/Manual/MDN.png"
+				},
+				{
+					"pk": "doc-22",
+					"name": "印记中文",
+					"url": "https://docschina.org/",
+					"image": "/nav/img/Manual/印记中文.png",
+					"display": "false"
+				}
+			]
+		},
+		{
+			"name": "文献检索",
+			"id": "paper",
+			"icon": "icofont-paper",
+			"items": [
+				{
+					"pk": "paper-1",
+					"name": "Turnitin",
+					"url": "https://www.turnitin.hk/int/",
+					"image": "/nav/img/Research/Turnitin.png",
+					"desc": "用于查重～"
+				},
+				{
+					"pk": "paper-2",
+					"name": "微学术",
+					"url": "https://w.s99s.top/lit/",
+					"image": "/nav/img/Research/微学术.png",
+					"desc": "别问，问就是镜像～"
+				},
+				{
+					"pk": "paper-3",
+					"name": "谷歌学术",
+					"url": "https://scholar.google.com.hk/",
+					"image": "/nav/img/Research/GoogleScholar.png",
+					"desc": "涵盖世界上绝大部分出版的学术期刊"
+				},
+				{
+					"pk": "paper-4",
+					"name": "中国知网",
+					"url": "https://cnki.net/",
+					"image": "/nav/img/Research/CNKI.png",
+					"desc": "只推荐用于协同Zotero做索引"
+				},
+				{
+					"pk": "paper-5",
+					"name": "Open Access Library",
+					"url": "https://www.oalib.com/",
+					"image": "/nav/img/Research/Oalib.png",
+					"desc": "全面、及时、优质、免费"
+				},
+				{
+					"pk": "paper-6",
+					"name": "Sci-Hub",
+					"url": "https://sci-hub.se/",
+					"image": "/nav/img/Research/SciHub.png",
+					"desc": "优质论文下载工具"
+				},
+				{
+					"pk": "paper-7",
+					"name": "Aminer",
+					"url": "https://www.aminer.cn/",
+					"image": "/nav/img/Research/Aminer.png",
+					"desc": "主打AI方向"
+				},
+				{
+					"pk": "paper-8",
+					"name": "ResearchGate",
+					"url": "https://www.researchgate.net/",
+					"image": "/nav/img/Research/ResearchGate.png",
+					"desc": "同时也是个科研交流平台"
+				}
+			]
+		},
+		{
+			"name": "技术博客",
+			"id": "blog",
+			"icon": "icofont-blogger",
+			"items": [
+				{
+					"pk": "blog-1",
+					"name": "廖雪峰官网",
+					"url": "https://www.liaoxuefeng.com/",
+					"image": "/nav/img/TechBlog/廖雪峰官网.png"
+				},
+				{
+					"pk": "blog-2",
+					"name": "阮一峰的网络日志",
+					"url": "https://www.ruanyifeng.com/blog/",
+					"image": "/nav/img/TechBlog/阮一峰的网络日志.png"
+				},
+				{
+					"pk": "blog-3",
+					"name": "杜赛的博客",
+					"url": "https://www.dusaiphoto.com/",
+					"image": "/nav/img/TechBlog/杜赛的博客.png"
+				},
+				{
+					"pk": "blog-4",
+					"name": "追梦人物的博客",
+					"url": "https://www.zmrenwu.com/",
+					"image": "/nav/img/TechBlog/Blog.png"
+				},
+				{
+					"pk": "blog-5",
+					"name": "WesBos Course",
+					"url": "https://wesbos.com/courses",
+					"image": "/nav/img/TechBlog/WesBos.png"
+				},
+				{
+					"pk": "blog-6",
+					"name": "Josh Comeau",
+					"url": "https://www.joshwcomeau.com/",
+					"image": "/nav/img/TechBlog/JoshComeau.png"
+				},
+				{
+					"pk": "blog-7",
+					"name": "SCOTCH",
+					"url": "https://scotch.io/",
+					"image": "/nav/img/TechBlog/SCOTCH.png"
+				},
+				{
+					"pk": "blog-8",
+					"name": "Taniarascia Blog",
+					"url": "https://www.taniarascia.com/blog/",
+					"image": "/nav/img/TechBlog/Blog.png"
+				},
+				{
+					"pk": "blog-9",
+					"name": "Flaviocopes",
+					"url": "https://flaviocopes.com/",
+					"image": "/nav/img/TechBlog/FlavioCopes.png"
+				},
+				{
+					"pk": "blog-10",
+					"name": "Codrops",
+					"url": "https://tympanus.net/codrops/category/tutorials/",
+					"image": "/nav/img/TechBlog/Codrops.png"
+				},
+				{
+					"pk": "blog-11",
+					"name": "David Walsh Blog",
+					"url": "https://davidwalsh.name/",
+					"image": "/nav/img/TechBlog/DavidWalsh.png"
+				},
+				{
+					"pk": "blog-12",
+					"name": "Kent C. Dodds Blog",
+					"url": "https://kentcdodds.com/blog",
+					"image": "/nav/img/TechBlog/KentDodds.png"
+				}
+			]
+		},
+		{
+			"name": "学无止境",
+			"id": "study",
+			"icon": "icofont-education",
+			"items": [
+				{
+					"pk": "study-1",
+					"name": "Coursera",
+					"url": "https://www.coursera.org/",
+					"image": "/nav/img/Learn/Coursera.png",
+					"desc": "最好的海外MOOC平台"
+				},
+				{
+					"pk": "study-2",
+					"name": "MIT公开课",
+					"url": "https://ocw.mit.edu/index.htm",
+					"image": "/nav/img/Learn/MIT.png",
+					"desc": "也算是上过MIT了"
+				},
+				{
+					"pk": "study-3",
+					"name": "Class Central",
+					"url": "https://www.classcentral.com/university/stanford",
+					"image": "/nav/img/Learn/ClassCentral.png",
+					"desc": "优质网课搜索平台"
+				},
+				{
+					"pk": "study-4",
+					"name": "中国大学MOOC",
+					"url": "https://www.icourse163.org/",
+					"image": "/nav/img/Learn/中国大学MOOC.png",
+					"desc": "爱慕课+网易+教育部"
+				},
+				{
+					"pk": "study-5",
+					"name": "Wolfram U",
+					"url": "https://www.wolfram.com/wolfram-u/",
+					"image": "/nav/img/Learn/WorlframU.png",
+					"desc": "基于mathematica的笔记"
+				},
+				{
+					"pk": "study-6",
+					"name": "FreeCodeCamp",
+					"url": "https://chinese.freecodecamp.org/learn",
+					"image": "/nav/img/Learn/FreeCodeCamp.png",
+					"desc": "闯关形式学编程"
+				},
+				{
+					"pk": "study-7",
+					"name": "LeetCode",
+					"url": "https://leetcode.com/",
+					"image": "/nav/img/Learn/LeetCode.png",
+					"desc": "笔试刷题"
+				},
+				{
+					"pk": "study-8",
+					"name": "JetBrains Academy",
+					"url": "https://hyperskill.org/",
+					"image": "/nav/img/Learn/JetBrainsAcademy.png",
+					"desc": "JB出品, 项目驱动!"
+				}
+			]
+		},
+		{
+			"name": "资源搜索",
+			"id": "resource",
+			"icon_backup": "fa-solid fa-compass",
+			"icon": "icofont-compass",
+			"items": [
+				{
+					"pk": "resource-1",
+					"name": "书籍",
+					"url": "resource/ebook/"
+				},
+				{
+					"pk": "resource-2",
+					"name": "游戏",
+					"url": "resource/game/"
+				},
+				{
+					"pk": "resource-3",
+					"name": "图片",
+					"url": "resource/picture/"
+				},
+				{
+					"pk": "resource-4",
+					"name": "图标",
+					"url": "resource/icon/"
+				},
+				{
+					"pk": "resource-5",
+					"name": "模版",
+					"url": "resource/template/"
+				},
+				{
+					"pk": "resource-6",
+					"name": "软件",
+					"url": "resource/software/"
+				},
+				{
+					"pk": "resource-7",
+					"name": "设计",
+					"url": "resource/design/"
+				},
+				{
+					"pk": "resource-8",
+					"name": "测试",
+					"url": "resource/test/",
+					"display": "false"
+				},
+				{
+					"pk": "resource-9",
+					"name": "面试",
+					"url": "resource/interview/"
+				}
+			]
+		},
+		{
+			"name": "肥宅娱乐",
+			"id": "recreation",
+			"icon": "icofont-steam",
+			"items": [
+				{
+					"pk": "recreation-1",
+					"name": "AcFun",
+					"url": "https://www.acfun.cn/",
+					"image": "/nav/img/Recreation/AcFun.png"
+				},
+				{
+					"pk": "recreation-2",
+					"name": "油管",
+					"url": "https://youtube.com/",
+					"image": "/nav/img/Recreation/YouTube.png"
+				},
+				{
+					"pk": "recreation-3",
+					"name": "努努影院",
+					"url": "https://www.nunuyy.top/",
+					"image": "/nav/img/Recreation/努努影院.png"
+				},
+				{
+					"pk": "recreation-4",
+					"name": "GetComic",
+					"url": "https://getcomics.info/cat/dc/",
+					"image": "/nav/img/Recreation/GetComic.png"
+				},
+				{
+					"pk": "recreation-5",
+					"name": "顶通漫画",
+					"url": "https://www.toptoon.net/search",
+					"image": "/nav/img/Recreation/Toptoon.png"
+				},
+				{
+					"pk": "recreation-6",
+					"name": "Twitter",
+					"url": "https://twitter.com/home",
+					"image": "/nav/img/Recreation/Twitter.png"
+				},
+				{
+					"pk": "recreation-7",
+					"name": "Jable.tv",
+					"url": "https://jable.tv/",
+					"image": "/nav/img/Recreation/Jable.png"
+				},
+				{
+					"pk": "recreation-8",
+					"name": "OMGYes",
+					"url": "https://www.omgyes.com/",
+					"image": "/nav/img/Recreation/OMGYes.png"
+				},
+				{
+					"pk": "recreation-9",
+					"name": "蓝调口琴网",
+					"url": "http://www.tenholes.com/index.php?r=index",
+					"image": "/nav/img/Recreation/蓝调口琴网.png",
+					"display": "false"
+				},
+				{
+					"pk": "recreation-10",
+					"name": "Apple Music",
+					"url": "https://beta.music.apple.com/cn/browse",
+					"image": "/nav/img/Recreation/AppleMusic.png"
+				},
+				{
+					"pk": "recreation-11",
+					"name": "三国杀",
+					"url": "https://web.sanguosha.com/",
+					"image": "/nav/img/Recreation/三国杀.png"
+				},
+				{
+					"pk": "recreation-12",
+					"name": "Codebabe",
+					"url": "https://codebabes.com/",
+					"image": "/nav/img/Recreation/Codebabe.png",
+					"display": "false"
+				},
+				{
+					"pk": "recreation-13",
+					"name": "CSSBattle",
+					"url": "https://cssbattle.dev/",
+					"image": "/nav/img/Recreation/CSSBattle.png"
+				},
+				{
+					"pk": "recreation-14",
+					"name": "Codepip",
+					"url": "https://codepip.com/games/",
+					"image": "/nav/img/Recreation/Codepip.png",
+					"display": "false"
+				},
+				{
+					"pk": "recreation-15",
+					"name": "全历史",
+					"url": "https://www.allhistory.com/",
+					"image": "/nav/img/Recreation/全历史.png"
+				},
+				{
+					"pk": "recreation-16",
+					"name": "百度贴吧",
+					"url": "https://tieba.baidu.com/",
+					"image": "/nav/img/Recreation/百度贴吧.png"
+				},
+				{
+					"pk": "recreation-17",
+					"name": "喜马拉雅",
+					"url": "https://www.ximalaya.com/",
+					"image": "/nav/img/Recreation/喜马拉雅.png"
+				},
+				{
+					"pk": "recreation-18",
+					"name": "Pixiv",
+					"url": "https://www.pixiv.net/discovery",
+					"image": "/nav/img/Recreation/Pixiv.png"
+				},
+				{
+					"pk": "recreation-19",
+					"name": "Transifex",
+					"url": "https://www.transifex.com/",
+					"image": "/nav/img/Recreation/Transifex.png"
+				}
+			]
+		},
+		{
+			"name": "实用工具",
+			"id": "utility",
+			"icon": "icofont-tools-alt-2",
+			"icon_backup": "icofont-tools-alt-2",
+			"items": [
+				{
+					"pk": "utility-1",
+					"name": "论文排版",
+					"url": "https://cn.overleaf.com/"
+				},
+				{
+					"pk": "utility-2",
+					"name": "快捷写作",
+					"url": "https://stackedit.io/app#"
+				},
+				{
+					"pk": "utility-3",
+					"name": "语法检测",
+					"url": "https://languagetool.org/editor/new"
+				},
+				{
+					"pk": "utility-4",
+					"name": "专业翻译",
+					"url": "https://www.deepl.com/zh/translator"
+				},
+				{
+					"pk": "utility-5",
+					"name": "文献管理",
+					"url": "https://www.zotero.org/user/login"
+				},
+				{
+					"pk": "utility-6",
+					"name": "知识整理",
+					"url": "https://www.notion.so/"
+				},
+				{
+					"pk": "utility-7",
+					"name": "思维导图",
+					"url": "https://whimsical.com/"
+				},
+				{
+					"pk": "utility-8",
+					"name": "文档编写",
+					"url": "https://v2.vuepress.vuejs.org/zh/guide/"
+				},
+				{
+					"pk": "utility-9",
+					"name": "流程设计",
+					"url": "https://www.draw.io/"
+				},
+				{
+					"pk": "utility-10",
+					"name": "网页收藏",
+					"url": "https://withpinbox.com/items/"
+				},
+				{
+					"pk": "utility-11",
+					"name": "PDF处理",
+					"url": "https://www.ilovepdf.com/zh-cn"
+				},
+				{
+					"pk": "utility-12",
+					"name": "格式转换",
+					"url": "https://cloudconvert.com/"
+				},
+				{
+					"pk": "utility-13",
+					"name": "图片去底",
+					"url": "https://www.aigei.com/bgremover"
+				},
+				{
+					"pk": "utility-14",
+					"name": "调查问卷",
+					"url": "https://zh.surveymonkey.com/"
+				},
+				{
+					"pk": "utility-15",
+					"name": "文件分发",
+					"url": "https://pc.woozooo.com/"
+				},
+				{
+					"pk": "utility-16",
+					"name": "资源快传",
+					"url": "https://bytefile.de/"
+				},
+				{
+					"pk": "utility-17",
+					"name": "占位图片",
+					"url": "https://tool.lu/imageholder/"
+				},
+				{
+					"pk": "utility-18",
+					"name": "表格生成",
+					"url": "https://www.tablesgenerator.com/"
+				},
+				{
+					"pk": "utility-19",
+					"name": "二维码",
+					"url": "https://cli.im/deqr"
+				},
+				{
+					"pk": "utility-20",
+					"name": "美国短信",
+					"url": "https://voice.google.com/u/0/about"
+				}
+			]
+		},
+		{
+			"name": "开发工具",
+			"id": "dev",
+			"icon": "icofont-code",
+			"items": [
+				{
+					"pk": "dev-1",
+					"name": "徽章生成",
+					"url": "https://shields.io/#your-badge"
+				},
+				{
+					"pk": "dev-2",
+					"name": "人机验证",
+					"url": "https://www.google.com/recaptcha/about/"
+				},
+				{
+					"pk": "dev-3",
+					"name": "综合工具",
+					"url": "https://tool.lu/"
+				},
+				{
+					"pk": "dev-4",
+					"name": "冷门工具",
+					"url": "http://www.gjw123.com/"
+				},
+				{
+					"pk": "dev-5",
+					"name": "代码转图",
+					"url": "https://carbon.now.sh/"
+				},
+				{
+					"pk": "dev-6",
+					"name": "廉价算力",
+					"url": "https://www.matpool.com/user"
+				},
+				{
+					"pk": "dev-7",
+					"name": "正则测试",
+					"url": "https://tool.oschina.net/regex"
+				},
+				{
+					"pk": "dev-8",
+					"name": "前端展示",
+					"url": "https://codepen.io/your-work"
+				},
+				{
+					"pk": "dev-9",
+					"name": "GIT表情",
+					"url": "https://gitmoji.dev/"
+				},
+				{
+					"pk": "dev-10",
+					"name": "项目保护",
+					"url": "https://dashboard.gitguardian.com/"
+				},
+				{
+					"pk": "dev-11",
+					"name": "工作计时",
+					"url": "https://wakatime.com/"
+				},
+				{
+					"pk": "dev-12",
+					"name": "KeyCode",
+					"url": "https://keycode.info/"
+				},
+				{
+					"pk": "dev-13",
+					"name": "网站托管",
+					"url": "https://vercel.com/dashboard"
+				},
+				{
+					"pk": "dev-14",
+					"name": "界面设计",
+					"url": "https://www.figma.com/"
+				},
+				{
+					"pk": "dev-15",
+					"name": "短信发送",
+					"url": "https://console.cloud.tencent.com/smsv2"
+				},
+				{
+					"pk": "dev-16",
+					"name": "对象存储",
+					"url": "https://portal.qiniu.com/kodo/bucket/resource?bucketName=morningstar-529"
+				},
+				{
+					"pk": "dev-17",
+					"name": "随机文章",
+					"url": "https://loremipsum.io/"
+				},
+				{
+					"pk": "dev-18",
+					"name": "地图工具",
+					"url": "https://account.mapbox.com/"
+				},
+				{
+					"pk": "dev-19",
+					"name": "域名解析",
+					"url": "https://www.nslookup.io/"
+				},
+				{
+					"pk": "dev-20",
+					"name": "兼容性表",
+					"url": "https://caniuse.com/"
+				},
+				{
+					"pk": "dev-21",
+					"name": "定时任务",
+					"url": "https://crontab.guru/"
+				},
+				{
+					"pk": "dev-22",
+					"name": "随机图片",
+					"url": "https://picsum.photos/"
+				}
+			]
+		}
+	]
+}

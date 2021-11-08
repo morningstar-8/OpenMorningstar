@@ -1,0 +1,2 @@
+firefox: https://github.com/mozilla/geckodriver/releases
+chrome: https://chromedriver.chromium.org/downloads

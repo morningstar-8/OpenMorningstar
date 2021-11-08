@@ -1,0 +1,15 @@
+[run]
+branch = True
+source = . 
+data_file = scripts/coverge/.coverge
+omit =
+	Morningstar/asgi.py
+	Morningstar/wsgi.py
+	manage.py
+
+[report]
+show_missing = True
+skip_covered = True
+
+[html]
+directory = scripts/coverge/coverage_html_report

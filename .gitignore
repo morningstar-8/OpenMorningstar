@@ -1,0 +1,33 @@
+# OS
+.DS_Store
+
+# IDE
+.idea/
+.VSCodeCounter/
+
+# Python
+env/
+__pycache__/
+
+# Sass
+*.css.map
+
+# Coverge
+coverage_html_report/
+.coverge
+
+# Django
+/database/
+/static/
+/media/
+/whoosh_index/
+.qiniu*
+/apps/blog/_themes/
+
+# secret
+.env
+secret.sh
+gcloud_instances.txt
+
+# Others
+TEMP/

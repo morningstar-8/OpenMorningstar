@@ -1,0 +1,29 @@
+.container {
+  width: 60%;
+  margin: 10% auto;
+  background-color: #f0f0f0;
+  padding: 2% 5%;
+  border-radius: 40px;
+  ul {
+    padding-left: 20px;
+    li {
+      line-height: 2.3;
+      a {
+        color: #20a53a;
+        text-decoration: none;
+      }
+      a.special {
+        color: rgb(232, 48, 186);
+      }
+      a:hover {
+        color: rgb(53, 232, 232);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    width: 80%;
+  }
+}
