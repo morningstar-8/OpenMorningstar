@@ -37,3 +37,6 @@ class UserAdmin(ImportExportActionModelAdmin):
     def 全名(self, obj):
         return obj.first_name + ' ' + obj.last_name
 # admin.site.register(User, UserAdmin)
+
+
+admin.site.site_header = "项目后台"
