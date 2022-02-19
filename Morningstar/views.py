@@ -147,6 +147,10 @@ def index(request):
             def create_activate_message(username):
                 code = random.randint(10000, 99999)
                 conn = get_redis_connection("redis")
+                try:
+                    conn.delete(f'{username}-activate')
+                except:
+                    pass
                 conn.set(f'{username}-activate', code, ex=60*5)
                 return f"通过该链接激活:\nhttps://morningstar529.com/activate/?username={username}&code={code}\n五分钟内有效"
 
@@ -228,10 +232,17 @@ def activate(request):
         username = request.GET["username"]
         code = request.GET["code"]
         conn = get_redis_connection("redis")
-        if code == conn.get(f'{username}-activate'):
+        redis_code_bin = conn.get(f'{username}-activate')
+        if not redis_code_bin:
+            return HttpResponse("激活链接已经超时")
+        else:
+            redis_code = str(redis_code_bin.decode())
+        if code == redis_code:
             user = User.objects.get(username=username)
             user.is_active = True
             user.save()
             conn.delete(f'{username}-activate')
             login(request, user)
             return redirect("/")
+    else:
+        return HttpResponse("这是啥玩意儿。。")
