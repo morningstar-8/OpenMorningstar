@@ -35,7 +35,7 @@ urlpatterns = [
     path('registry/', views.registry, name="registry"),
     path('admin/', admin.site.urls, name="admin"),
     path('sms/', views.sms, name="sms"),
-    path('sitemap.xml', cache_page(0)(sitemap), {'sitemaps': sitemaps},
+    path('sitemap.xml', cache_page(60*5)(sitemap), {'sitemaps': sitemaps},
          name='django.contrib.sitemaps.views.sitemap'),
 
     path('setKey/<str:value>/', views.setKey, name="setKey"),
