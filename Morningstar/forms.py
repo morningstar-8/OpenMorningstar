@@ -11,7 +11,7 @@ class LoginForm(forms.Form):
         label="用户名", initial="", required=True, widget=forms.TextInput(attrs={"class": "form-control", "placeholder": "小明"}))
     password = forms.CharField(
         label="密码", widget=forms.PasswordInput(attrs={"class": "form-control", "placeholder": "yyds"}), required=True)
-    # captcha = ReCaptchaField(label="人机验证") # TODO:
+    captcha = ReCaptchaField(label="人机验证")
 
 
 class RegisterFormWithPhoneNumber(forms.Form):
@@ -40,4 +40,4 @@ class RegisterForm(forms.Form):
         label='设置密码', widget=forms.PasswordInput(attrs={"class": "form-control", }), required=True)
     confirm_password = forms.CharField(
         label='重复密码', widget=forms.PasswordInput(attrs={"class": "form-control", }), required=True)
-    # captcha = ReCaptchaField(label="人机验证") # TODO:
+    captcha = ReCaptchaField(label="人机验证")

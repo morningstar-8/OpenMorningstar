@@ -237,12 +237,14 @@ def activate(request):
             return HttpResponse("激活链接已经超时")
         else:
             redis_code = str(redis_code_bin.decode())
-        if code == redis_code:
-            user = User.objects.get(username=username)
-            user.is_active = True
-            user.save()
-            conn.delete(f'{username}-activate')
-            login(request, user)
-            return redirect("/")
+            if code == redis_code:
+                user = User.objects.get(username=username)
+                user.is_active = True
+                user.save()
+                conn.delete(f'{username}-activate')
+                auth.login(request, user)
+                return redirect("/")
+            else:
+                return HttpResponse("错误的激活链接")
     else:
         return HttpResponse("这是啥玩意儿。。")
