@@ -7,6 +7,8 @@ from django.contrib.auth.decorators import login_required
 from django_user_agents.utils import get_user_agent
 from django.views.generic import View
 from django.contrib import messages
+from Morningstar.settings.common import EMAIL_HOST_USER
+from django.core.mail import send_mail
 import requests
 import colorama
 import json
@@ -121,26 +123,47 @@ def index(request):
         logger.info("未认证进入首页...")
         # 判断confirm_password是否在POST中，如果在则注册
         try:
-            logger.info(request.POST["confirm_password"])
             logger.info("现在是注册")
             form = RegisterForm(request.POST)
             if form.is_valid():
+                email = form.cleaned_data["email"]
                 username = form.cleaned_data.get('username')
                 password = form.cleaned_data.get('password')
                 confirm_password = form.cleaned_data.get('confirm_password')
-                if User.objects.filter(username=username).exists():
-                    messages.add_message(request, messages.ERROR, "用户名已存在")
+
+                if User.objects.filter(email=email).exists():
+                    messages.add_message(request, messages.ERROR, "此邮箱已注册")
                     return HttpResponseRedirect("/")
-                else:
-                    if password != confirm_password:
-                        messages.add_message(
-                            request, messages.ERROR, "两次密码不一致")
-                        return HttpResponseRedirect("/")
-                    else:
-                        user = User.objects.create(
-                            username=username, password=password)
-                        auth.login(request, user)
-                        return redirect("/")
+
+                if User.objects.filter(username=username).exists():
+                    messages.add_message(request, messages.ERROR, "此用户名已注册")
+                    return HttpResponseRedirect("/")
+
+                if password != confirm_password:
+                    messages.add_message(
+                        request, messages.ERROR, "两次密码不一致")
+                    return HttpResponseRedirect("/")
+
+            def create_activate_message(username):
+                code = random.randint(10000, 99999)
+                conn = get_redis_connection("redis")
+                conn.set(f'{username}-activate', code, ex=60*5)
+                return f"通过该链接激活:\nhttps://morningstar529.com/activate/?username={username}&code={code}\n五分钟内有效"
+
+            user = User.objects.create(
+                username=username, password=password, email=email, is_active=False)
+            subject = "激活邮件"
+            message = create_activate_message(username)
+            from_email = EMAIL_HOST_USER
+            send_mail(
+                subject,
+                message,
+                from_email,
+                [email],
+            )
+            messages.add_message(
+                request, messages.INFO, "注册已完成...请通过邮箱激活")
+            return redirect("/")
 
         except:
             logger.info("现在是登录")
@@ -198,3 +221,17 @@ def getKey(request):
         return HttpResponse("数据已经超时")
     else:
         return HttpResponse("设置成功，值为：" + str(value.decode()))
+
+
+def activate(request):
+    if request.method == "GET":
+        username = request.GET["username"]
+        code = request.GET["code"]
+        conn = get_redis_connection("redis")
+        if code == conn.get(f'{username}-activate'):
+            user = User.objects.get(username=username)
+            user.is_active = True
+            user.save()
+            conn.delete(f'{username}-activate')
+            login(request, user)
+            return redirect("/")
