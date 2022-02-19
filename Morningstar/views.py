@@ -6,6 +6,7 @@ from Morningstar.models import User
 from django.contrib.auth.decorators import login_required
 from django_user_agents.utils import get_user_agent
 from django.views.generic import View
+from django.contrib import messages
 import requests
 import colorama
 import json
@@ -13,7 +14,7 @@ import random
 import logging
 from django_redis import get_redis_connection
 
-from .forms import LoginForm
+from .forms import LoginForm, RegisterForm
 from .sms import send_sms_single
 from Morningstar.settings.common import TENCENT_SMS_TEMPLATE
 
@@ -118,21 +119,50 @@ def index(request):
         return render(request, "base/home.html")
     else:
         logger.info("未认证进入首页...")
-        form = LoginForm(request.POST)
-        if form.is_valid():
-            username = form.cleaned_data.get('username')
-            password = form.cleaned_data.get('password')
-            user = auth.authenticate(username=username, password=password)
-            if user is not None:
-                auth.login(request, user)
-                logger.info("身份验证成功...")
-                next = request.POST.get("next", "/")
-                return redirect(next if next else "/")
-            else:
-                return HttpResponseRedirect("/")
-        else:
-            login_form = LoginForm()
-            return render(request, "base/login.html", context={"login_form": login_form})
+        # 判断confirm_password是否在POST中，如果在则注册
+        try:
+            logger.info(request.POST["confirm_password"])
+            logger.info("现在是注册")
+            form = RegisterForm(request.POST)
+            if form.is_valid():
+                username = form.cleaned_data.get('username')
+                password = form.cleaned_data.get('password')
+                confirm_password = form.cleaned_data.get('confirm_password')
+                if User.objects.filter(username=username).exists():
+                    messages.add_message(request, messages.ERROR, "用户名已存在")
+                    return HttpResponseRedirect("/")
+                else:
+                    if password != confirm_password:
+                        messages.add_message(
+                            request, messages.ERROR, "两次密码不一致")
+                        return HttpResponseRedirect("/")
+                    else:
+                        user = User.objects.create(
+                            username=username, password=password)
+                        auth.login(request, user)
+                        return redirect("/")
+
+        except:
+            logger.info("现在是登录")
+            form = LoginForm(request.POST)
+            if form.is_valid():
+                username = form.cleaned_data.get('username')
+                password = form.cleaned_data.get('password')
+                user = auth.authenticate(username=username, password=password)
+                if user is not None:
+                    auth.login(request, user)
+                    logger.info("身份验证成功...")
+                    next = request.POST.get("next", "/")
+                    return redirect(next if next else "/")
+                else:
+                    messages.add_message(request, messages.ERROR, "用户名或密码错误")
+                    return HttpResponseRedirect("/")
+        login_form = LoginForm()
+        register_form = RegisterForm()
+        return render(request, "base/login_register.html", context={
+            "login_form": login_form,
+            "register_form": register_form,
+        })
 
 
 @login_required(login_url="/")

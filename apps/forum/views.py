@@ -5,51 +5,13 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.contrib.auth import authenticate, login, logout
 from Morningstar.models import User
-# TODO: 定制此表单[placeholder, label, help_text, max_length, min_length, required]
-from django.contrib.auth.forms import UserCreationForm
 from .models import Room, Topic, Message
 from .forms import RoomForm, UserForm
-
-
-def loginPage(request):
-    page = 'login'
-    # NOTE: 已登录用户自动跳转到首页
-    if request.user.is_authenticated:
-        return redirect("forum:home")
-    if request.method == 'POST':
-        username = request.POST.get('username')
-        password = request.POST.get('password')
-        try:
-            user = User.objects.get(username=username)
-        except:
-            messages.add_message(request, messages.ERROR, "用户不存在")
-        user = authenticate(request, username=username, password=password)
-        if user is not None:
-            login(request, user)
-            return redirect("forum:home")
-        else:
-            messages.add_message(request, messages.ERROR, "用户名或密码错误")
-    return render(request, 'forum/login_register.html', context={"page": page})
 
 
 def logoutUser(request):
     logout(request)
     return redirect("forum:home")
-
-
-def registerPage(request):
-    form = UserCreationForm()
-    if request.method == 'POST':
-        form = UserCreationForm(request.POST)
-        if form.is_valid():
-            user = form.save(commit=False)
-            # NOTE: 可对用户名等进行预处理
-            user.save()
-            login(request, user)
-            return redirect('forum:login')
-        else:
-            messages.add_message(request, messages.ERROR, "注册失败")
-    return render(request, 'forum/login_register.html', context={"form": form})
 
 
 def home(request):
@@ -82,7 +44,19 @@ def room(request, pk):
     return render(request, 'forum/room.html', context={'room': room, 'room_messages': room_messages, "participants": participants})
 
 
-@login_required(login_url='forum:login')
+@login_required(login_url='/')
+def updateUser(request):
+    user = request.user
+    form = UserForm(instance=user)
+    if request.method == 'POST':
+        form = UserForm(request.POST, instance=user)
+        if form.is_valid():
+            form.save()
+            return redirect("forum:user-profile", pk=user.pk)
+    return render(request, "forum/update_user.html", {'form': form, })
+
+
+@login_required(login_url='/')
 def createRoom(request):
     form = RoomForm()
     topics = Topic.objects.all()
@@ -105,7 +79,7 @@ def createRoom(request):
     return render(request, 'forum/room_form.html', context={"form": form, "topics": topics})
 
 
-@login_required(login_url='forum:login')
+@login_required(login_url='/')
 def updateRoom(request, pk):
     room = Room.objects.get(pk=pk)
     topics = Topic.objects.all()
@@ -128,7 +102,7 @@ def updateRoom(request, pk):
     return render(request, 'forum/room_form.html', context={"form": RoomForm(instance=room), "topics": topics, "room": room})
 
 
-@login_required(login_url='forum:login')
+@login_required(login_url='/')
 def deleteRoom(request, pk):
     room = Room.objects.get(pk=pk)
     if request.user != room.host:
@@ -139,7 +113,7 @@ def deleteRoom(request, pk):
     return render(request, "forum/delete.html", context={"obj": room})
 
 
-@login_required(login_url='forum:login')
+@login_required(login_url='/')
 def deleteMessage(request, pk):
     message = Message.objects.get(pk=pk)
     if request.user != message.owner:
@@ -147,7 +121,6 @@ def deleteMessage(request, pk):
     if request.method == 'POST':
         message.delete()
         return redirect("forum:home")
-    # TODO: 需要继续跳转到房间
     return render(request, "forum/delete.html", context={"obj": message})
 
 
@@ -159,18 +132,6 @@ def userProfile(request, pk):
     return render(request, "forum/profile.html", context={
         "user": user, "rooms": rooms, "room_messages": room_messages, "topics": topics
     })
-
-
-@login_required(login_url='forum:login')
-def updateUser(request):
-    user = request.user
-    form = UserForm(instance=user)
-    if request.method == 'POST':
-        form = UserForm(request.POST, instance=user)
-        if form.is_valid():
-            form.save()
-            return redirect("forum:user-profile", pk=user.pk)
-    return render(request, "forum/update_user.html", {'form': form, })
 
 
 def topicsPage(request):

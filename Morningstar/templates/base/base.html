@@ -15,6 +15,47 @@
 
 <body>
     <main>
+        <style>
+            .float {
+                float: left;
+                width: 100%;
+            }
+
+            .messages {
+                border: 4px dashed rgb(184, 226, 47);
+                border-radius: 1em;
+                margin: 0 auto;
+                width: 80%;
+            }
+
+            .message {
+                text-align: center;
+                display: block;
+                padding: 0.5rem 0;
+                width: 100%;
+                font-size: 1.2rem;
+                margin-bottom: 0;
+            }
+
+            .message-error {
+                color: rgb(255, 115, 0);
+            }
+
+            @media screen and (max-width: 600px) {
+                .messages {
+                    width: 100%;
+                }
+            }
+        </style>
+        {% if messages %}
+        <div class="float">
+            <div class="messages">
+                {% for message in messages %}
+                <p{% if message.tags %} class="message message-{{ message.tags }}" {% endif %}>{{ message }}</p>
+                    {% endfor %}
+            </div>
+        </div>
+        {% endif %}
         {% block content %}{% endblock %}
     </main>
 
