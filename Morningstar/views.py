@@ -1,5 +1,6 @@
 from django.http import HttpResponseRedirect, HttpResponse, JsonResponse, Http404
 from django.shortcuts import render, redirect, reverse
+from django.contrib.auth.hashers import make_password
 from django.contrib.sessions.models import Session
 from django.contrib import auth
 from Morningstar.models import User
@@ -121,8 +122,11 @@ def index(request):
         return render(request, "base/home.html")
     else:
         logger.info("未认证进入首页...")
-        # 判断confirm_password是否在POST中，如果在则注册
+
         try:
+            # 判断confirm_password是否在POST中，如果在则注册
+            if request.POST["confirm_password"]:
+                pass
             logger.info("现在是注册")
             form = RegisterForm(request.POST)
             if form.is_valid():
@@ -155,7 +159,7 @@ def index(request):
                 return f"通过该链接激活:\nhttps://morningstar529.com/activate/?username={username}&code={code}\n五分钟内有效"
 
             user = User.objects.create(
-                username=username, password=password, email=email, is_active=False)
+                username=username, password=make_password(password), email=email, is_active=False)
             subject = "激活邮件"
             message = create_activate_message(username)
             from_email = EMAIL_HOST_USER
@@ -175,7 +179,8 @@ def index(request):
             if form.is_valid():
                 username = form.cleaned_data.get('username')
                 password = form.cleaned_data.get('password')
-                user = auth.authenticate(username=username, password=password)
+                user = auth.authenticate(
+                    username=username, password=password)
                 if user is not None:
                     auth.login(request, user)
                     logger.info("身份验证成功...")
