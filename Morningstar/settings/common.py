@@ -73,8 +73,6 @@ INSTALLED_APPS = [
 
 """中间价"""
 MIDDLEWARE = [
-    'django.middleware.cache.UpdateCacheMiddleware',  # NOTE:站点缓存中间件，位置固定
-
     # The order of MIDDLEWARE is important. You should include the Debug Toolbar middleware as early as possible in the list. However, it must come after any other middleware that encodes the response’s content, such as GZipMiddleware
     "debug_toolbar.middleware.DebugToolbarMiddleware",
 
@@ -87,9 +85,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.common.BrokenLinkEmailsMiddleware',  # 404邮箱提醒
-
-    'django.middleware.cache.FetchFromCacheMiddleware',  # NOTE: 站点缓存中间件，位置固定
 ]
+
 
 """跨域访问"""
 CORS_ALLOWED_ORIGINS = [
@@ -97,11 +94,6 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:8000",  # NOTE: 测试专用
 ]
 # CORS_ALLOW_ALL_ORIGINS = True
-
-"""站点缓存"""
-CACHE_MIDDLEWARE_ALIAS = 'default'  # 用于存储的缓存别名
-CACHE_MIDDLEWARE_SECONDS = 60 * 1  # 应缓存每个页面的秒数
-CACHE_MIDDLEWARE_KEY_PREFIX = "Morningstar"  # 缓存前缀
 
 
 TEMPLATES = [
