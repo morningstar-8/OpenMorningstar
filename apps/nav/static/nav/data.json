@@ -696,8 +696,7 @@
 				{
 					"pk": "resource-8",
 					"name": "测试",
-					"url": "resource/test/",
-					"display": "false"
+					"url": "resource/test/"
 				},
 				{
 					"pk": "resource-9",
