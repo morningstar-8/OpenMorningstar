@@ -182,7 +182,7 @@ def resource(request, name):
             "title": "测试",
             "items": [
                 {"name": "代理抓包", "url": "https://wproxy.org/whistle/"},
-                {"name": "性能在线分析", "url": "https://gtmetrix.com/"},
+                {"name": "网站测速(可用LH)", "url": "https://www.36ce.net/"},
                 {"name": "技术栈检测", "url": "https://www.wappalyzer.com/"},
             ]
         }
