@@ -6,6 +6,7 @@
 
 **base**
 
+- github action 控制 github 发布
 - 个人介绍页面
 - 微信公众号
 - 微信小程序(指南：https://www.dusaiphoto.com/article/167/)
@@ -29,7 +30,7 @@ PC 端：下拉刷新方式
 - 侧边栏功能，最新文章，最多阅读，标签云等。
 - 友情链接
 - 代码点击复制功能
-- 支持 Oauth 登陆，现已有 Google,GitHub,Apple。
+- 支持 Oauth 登陆，现已有 Google,GitHub。
 - 简单的 SEO 功能，新建文章等会自动通知 Google 和百度。
 - 集成了简单的图床功能。
 - 三种皮肤自由切换
