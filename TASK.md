@@ -6,7 +6,6 @@
 
 **base**
 
-- github action 控制 github 发布
 - 个人介绍页面
 - 微信公众号
 - 微信小程序(指南：https://www.dusaiphoto.com/article/167/)
@@ -75,7 +74,8 @@ PC 端：下拉刷新方式
 - NodeJS
 
 **storage**
-对象存储面板与接口实现
+
+对象存储面板与接口实现【前置条件：NodeJS】
 
 **tracer**
 指南：https://www.bilibili.com/video/BV1nt4y1y7v2?p=21&spm_id_from=pageDriver
