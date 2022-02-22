@@ -62,7 +62,7 @@ def shortcut(request, name):
     elif name in ["docs", "icofont"]:
         return redirect("https://" + name + ".morningstar529.com/")
     # 项目快捷链接
-    elif name in ["issue", "auto", "src", "host", "vercel", "domain", "namecheap", "license", "coverage", "task"]:
+    elif name in ["issue", "auto", "src", "host", "vercel", "domain", "namecheap", "license", "coverage", "task", "resume"]:
         if name == 'issue':
             return redirect("https://github.com/HenryJi529/OpenMorningstar/issues")
         elif name == "auto":
@@ -79,6 +79,8 @@ def shortcut(request, name):
             return redirect("https://coverage.morningstar529.com/")
         elif name == "task":
             return redirect("https://ticktick.com/webapp#m/all/matrix")
+        elif name == "resume":
+            return redirect("https://resume.morningstar529.com/")
         else:
             pass
     # 静态资源管理
