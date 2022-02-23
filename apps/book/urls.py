@@ -1,10 +1,11 @@
 from django.urls import path
 import os
+from django.views.decorators.cache import cache_page
 from . import views
 
 
 app_name = 'book'
 urlpatterns = [
-    path('', views.index, name="index"),
-    path('api/', views.api, name="api"),
+    path('', cache_page(60*5)(views.inde), name="index"),
+    path('api/', cache_page(60*5)(views.api), name="api"),
 ]
