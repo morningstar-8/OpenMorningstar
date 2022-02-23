@@ -6,6 +6,6 @@ from . import views
 
 app_name = 'book'
 urlpatterns = [
-    path('', cache_page(60*5)(views.inde), name="index"),
+    path('', cache_page(60*5)(views.index), name="index"),
     path('api/', cache_page(60*5)(views.api), name="api"),
 ]
