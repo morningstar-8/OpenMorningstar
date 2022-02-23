@@ -40,12 +40,12 @@ PC 端：下拉刷新方式
 
 **fake**
 
-- Github
-- 京东
-- 苹果
-- 星巴克
-- 油管
-- 宝塔
+- Github(https://github.com/)
+- 京东(https://www.jd.com/)
+- 苹果(https://www.apple.com/hk/)
+- 星巴克(https://zh.starbucks.com.hk/)
+- 油管(https://www.youtube.com/)
+- 宝塔(https://demo.bt.cn/login)
 
 - **forum**
 
