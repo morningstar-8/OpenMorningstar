@@ -39,7 +39,7 @@ urlpatterns = [
          name='django.contrib.sitemaps.views.sitemap'),
 
     path('setKey/<str:value>/', views.setKey, name="setKey"),
-    path('getKey/', cache_page(0)(views.getKey), name="getKey"),
+    path('getKey/', views.getKey, name="getKey"),
     # app
     path('album/', include('album.urls')),
     path('blog/', include('blog.urls')),

@@ -124,7 +124,6 @@ def index(request):
         return render(request, "base/home.html")
     else:
         logger.info("未认证进入首页...")
-
         try:
             # 判断confirm_password是否在POST中，如果在则注册
             if request.POST["confirm_password"]:
