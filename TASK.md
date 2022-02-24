@@ -13,7 +13,7 @@
 - 账号管理
   - 表单校验并提醒(AJAX)
   - 短信验证码/短信绑定界面
-  - 第三方支持: Github
+  - 支持 Oauth 登陆，现已有 Google,GitHub,Wechat,Twitter。
   - profile 修改(密码，昵称等)【短信，邮箱】
 
 **album**
@@ -28,8 +28,7 @@ PC 端：下拉刷新方式
 - 完整的评论功能，包括发表回复评论，以及评论的邮件提醒，支持 Markdown。
 - 最多阅读
 - 代码点击复制功能
-- 支持 Oauth 登陆，现已有 Google,GitHub。
-- 简单的 SEO 功能，新建文章等会自动通知 Google 和百度。
+- 简单的 SEO 功能，新建文章等会自动通知 Google。
 - 集成了简单的图床功能。
 - 三种皮肤自由切换
 - 多目标源博文分享
@@ -67,6 +66,7 @@ PC 端：下拉刷新方式
 - Django
 - Bootstrap
 - Vue
+- React
 - NodeJS
 
 **storage**
