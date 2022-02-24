@@ -30,6 +30,7 @@ sitemaps = {
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('login/', views.login, name="login"),
     path('logout/', views.logout, name="logout"),
     path('activate/', views.activate, name="activate"),
     path('registry/', views.registry, name="registry"),
@@ -54,7 +55,6 @@ urlpatterns = [
             {"document_root": settings.common.MEDIA_ROOT}),
     path('api-auth/', include('rest_framework.urls')),  # restful api
     path('__debug__/', include('debug_toolbar.urls')),
-
     # 快捷方式
     path('<slug:name>/', views.shortcut, name="shortcut"),
 ]

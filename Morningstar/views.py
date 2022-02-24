@@ -198,6 +198,16 @@ def index(request):
         })
 
 
+def login(request):
+    auth.logout(request)
+    login_form = LoginForm()
+    register_form = RegisterForm()
+    return render(request, "base/login_register.html", context={
+        "login_form": login_form,
+        "register_form": register_form,
+    })
+
+
 @login_required(login_url="/")
 def logout(request):
     auth.logout(request)

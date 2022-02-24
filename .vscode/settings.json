@@ -1,7 +1,14 @@
 {
+	"files.exclude": {
+		"**/__pycache__": true,
+		"**/.DS_Store": true,
+		"**/.git": true,
+		"**/env": false,
+		"**/node_modules": true
+	  },
 	/****todo-tree****/
 	"todo-tree.filtering.excludeGlobs": [
-		"/env/**",
+		"**/env/**",
 		"**/node_modules",
 		"**/README.md",
 		"**/scripts/coverge",

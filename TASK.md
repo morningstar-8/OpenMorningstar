@@ -13,7 +13,7 @@
 - 账号管理
   - 表单校验并提醒(AJAX)
   - 短信验证码/短信绑定界面
-  - 第三方支持: Github, Google, Microsoft, Apple
+  - 第三方支持: Github
   - profile 修改(密码，昵称等)【短信，邮箱】
 
 **album**
