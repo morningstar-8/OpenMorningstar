@@ -159,9 +159,8 @@ config_node() {
 install_tiny_tool() {
   echo "安装rename..."
   sudo apt install -y rename
-  echo "安装cmatrix,cowsay,asciiquarium,ninvaders..."
-  sudo apt install -y cmatrix cowsay ninvaders
-  sudo snap install asciiquarium # TODO: snap无法连接
+  echo "安装cmatrix,cowsay,ninvaders,moon-buggy..."
+  sudo apt install -y cmatrix cowsay ninvaders moon-buggy
   echo "安装neofetch..."
   sudo apt install -y neofetch
   echo "安装net-tools..."
