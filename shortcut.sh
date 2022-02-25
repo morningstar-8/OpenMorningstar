@@ -163,5 +163,5 @@ e) publicCoverage ;;
 esac
 end_time=$(date +%s)
 during=$((end_time - start_time))
-echo "\033[33m运行时间: $during 秒\033[0m"
+echo "\033[33m总运行时间: $during 秒\033[0m"
 fortune | lolcat
