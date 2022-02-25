@@ -44,6 +44,7 @@ autoci() {
 	# 更新静态文件
 	cd static/ && git add -A && git ci "update: ${ci_time}" && git push github main && cd ../
 	echo "更新完成"
+	fortune
 }
 
 # 远程同步
@@ -138,7 +139,7 @@ e. publicCoverage();
 7. restore();
 8. upgrade();
 "
-read -p "输入序号(a-e|0-9): " order
+read -p "输入序号(a-e|0-8): " order
 
 start_time=$(date +%s)
 
