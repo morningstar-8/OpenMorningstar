@@ -44,7 +44,7 @@ autoci() {
 	# 更新静态文件
 	cd static/ && git add -A && git ci "update: ${ci_time}" && git push github main && cd ../
 	echo "更新完成"
-	fortune
+
 }
 
 # 远程同步
@@ -163,4 +163,5 @@ e) publicCoverage ;;
 esac
 end_time=$(date +%s)
 during=$((end_time - start_time))
-echo "运行时间: $during 秒"
+echo -e "\033[33m运行时间: $during 秒\033[0m"
+fortune | lolcat
