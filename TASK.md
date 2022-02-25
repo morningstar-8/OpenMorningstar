@@ -62,12 +62,12 @@ PC 端：下拉刷新方式
 **snippets**
 
 - CSS
-- JS
-- Django
 - Bootstrap
+- JS
+- NodeJS
+- Django
 - Vue
 - React
-- NodeJS
 
 **storage**
 
