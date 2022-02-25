@@ -165,24 +165,36 @@ config_caddy() {
 }
 
 install_tiny_tool() {
+  echo "安装rename..."
+  sudo apt install -y rename
+  echo "安装cmatrix,cowsay,asciiquarium,ninvaders..."
+  sudo apt install -y cmatrix cowsay ninvaders
+  sudo snap install asciiquarium # TODO: snap无法连接
   echo "安装neofetch..."
   sudo apt install -y neofetch
   echo "安装net-tools..."
   sudo apt install -y net-tools
-  echo "安装figlet..."
-  sudo apt install -y figlet
+  echo "安装figlet,toilet..."
+  sudo apt install -y figlet toilet
   echo "安装croc..."
   curl https://getcroc.schollz.com | bash
+  echo "安装ffsend..."
+  sudo snap install ffsend
   echo "安装you-get..."
   sudo /usr/bin/pip3 install you-get
   echo "安装rsync..."
   sudo apt-get install -y rsync
   echo "安装asciinema..."
   sudo apt install -y asciinema
-  echo "安装bpytop..."
-  sudo snap install bpytop
+  echo "安装bpytop,htop..."
+  sudo snap install -y bpytop htop
   echo "安装trash-cli..."
-  sudo apt install trash-cli
+  sudo apt install -y trash-cli
+  echo "安装w3m..."
+  sudo apt install -y w3m
+  echo "安装transmission"
+  sudo apt install -y transmission-cli
+
   echo "DONE!"
 }
 

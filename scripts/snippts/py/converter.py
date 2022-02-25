@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# NOTE: ffmpeg
 import sh
 import re
 from moviepy.editor import *
