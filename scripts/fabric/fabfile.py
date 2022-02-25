@@ -121,15 +121,15 @@ def upgrade(c):
             c.run('docker rm -f $(docker ps -aq | tr "\\n" " ")')  # NOTE: 删除全部容器
         except:
             pass
-        # images = ["niruix/sshwifty", "diygod/rsshub", "ghost", "gitea/gitea", "snowdreamtech/frps", "nextcloud", "mysql", "memcached", "registry.gitlab.com/timvisee/send",
-        #           "jellyfin/jellyfin", "registry", "portainer/portainer", "fauria/vsftpd", "redis", "alpine", "nginx", "ubuntu",
-        #           "henry529/django", "henry529/nginx", "henry529/beancount", "henry529/tshock", ]
-        # for image in images:
-        #     try:
-        #         c.run(f'docker rmi {image}')
-        #     except:
-        #         pass
-        #     c.run(f'docker pull {image}')
+        images = ["niruix/sshwifty", "diygod/rsshub", "ghost", "gitea/gitea", "snowdreamtech/frps", "nextcloud", "mysql", "memcached", "registry.gitlab.com/timvisee/send",
+                  "jellyfin/jellyfin", "registry", "portainer/portainer", "fauria/vsftpd", "redis", "alpine", "nginx", "ubuntu",
+                  "henry529/django", "henry529/nginx", "henry529/beancount", "henry529/tshock", ]
+        for image in images:
+            try:
+                c.run(f'docker rmi {image}')
+            except:
+                pass
+            c.run(f'docker pull {image}')
         c.run('source ~/.zshrc && cd ~/morningstar/deploy; docker-compose up --build -d')
         print("部署项目...")
 

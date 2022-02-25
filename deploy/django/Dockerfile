@@ -6,6 +6,7 @@ RUN apt-get update
 RUN apt-get install -y ca-certificates
 RUN mv /etc/apt/sources.list /etc/apt/sources.list.bak
 COPY ./_mirror_cn/tuna-sources.list /etc/apt/sources.list
+
 RUN apt-get update
 RUN apt-get install -y iputils-ping net-tools vim
 RUN apt-get install -y python3-pip mysql-client libmysqlclient-dev 
