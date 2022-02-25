@@ -156,14 +156,6 @@ config_node() {
   nvm install node # 当前安装v17.0.1
 }
 
-config_caddy() {
-  echo "deb [trusted=yes] https://apt.fury.io/caddy/ /" |
-    sudo tee -a /etc/apt/sources.list.d/caddy-fury.list
-  sudo apt update
-  sudo apt install -y caddy
-  sudo systemctl disable caddy
-}
-
 install_tiny_tool() {
   echo "安装rename..."
   sudo apt install -y rename
@@ -351,8 +343,6 @@ full_process() {
   config_supervisor
   print_step "配置Node..."
   config_node
-  print_step "配置Caddy..."
-  config_caddy
   print_step "安装小工具..."
   install_tiny_tool
   print_step "安装Jupyter..."
@@ -383,15 +373,14 @@ c. 更新脚本...;
 9. 配置Docker...;
 10.配置Supervisor...;
 11.配置Node...;
-12.配置caddy...;
-13.安装小工具...;
-14.安装Jupyter...;
-15.安装VScode...;
-16.部署Morningstar...;
-17.部署远程桌面... ;;【不包含在“0”中】
+12.安装小工具...;
+13.安装Jupyter...;
+14.安装VScode...;
+15.部署Morningstar...;
+16.部署远程桌面... ;;【不包含在“0”中】
 ===============================
 "
-  read -p "输入序号(a-c | 0-17): " order
+  read -p "输入序号(a-c | 0-16): " order
   case $order in
   a) backup_docker_volumes ;;
   b) restore_docker_volumes ;;
@@ -408,12 +397,11 @@ c. 更新脚本...;
   9) config_docker ;;
   10) config_supervisor ;;
   11) config_node ;;
-  12) config_caddy ;;
-  13) install_tiny_tool ;;
-  14) install_jupyter ;;
-  15) install_vscode ;;
-  16) deploy_morningstar ;;
-  17) deploy_remote_desktop ;;
+  12) install_tiny_tool ;;
+  13) install_jupyter ;;
+  14) install_vscode ;;
+  15) deploy_morningstar ;;
+  16) deploy_remote_desktop ;;
   *) echo "error input" ;;
   esac
 }
