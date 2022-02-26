@@ -11,6 +11,7 @@
 - 微信小程序(指南：https://www.dusaiphoto.com/article/167/)
 - 全面测试
 - 账号管理
+  - 忘记密码
   - 表单校验并提醒(AJAX)
   - 短信验证码/短信绑定界面
   - 支持 Oauth 登陆，现已有 Google,GitHub,Wechat,Twitter。
@@ -45,6 +46,7 @@ PC 端：下拉刷新方式
 - 星巴克(https://zh.starbucks.com.hk/)
 - 油管(https://www.youtube.com/)
 - 宝塔(https://demo.bt.cn/login)
+- biolinky(https://biolinky.co/)
 
 - **forum**
 
