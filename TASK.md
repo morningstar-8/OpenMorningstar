@@ -47,6 +47,7 @@ PC 端：下拉刷新方式
 - 油管(https://www.youtube.com/)
 - 宝塔(https://demo.bt.cn/login)
 - biolinky(https://biolinky.co/)
+- 三国杀(https://web.sanguosha.com/login/index.html)
 
 - **forum**
 
