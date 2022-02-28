@@ -127,8 +127,6 @@ def resource(request, name):
             "items": [
                 {"name": "前端面试常考问题整理 | 按模块和知识点分类",
                     "url": "https://blog.poetries.top/FE-Interview-Questions/"},
-                {"name": "WEB前端面试宝典",
-                    "url": "https://github.com/h5bp/Front-end-Developer-Interview-Questions/"},
                 {"name": "掘金前端面试题合集",
                     "url": "https://github.com/shfshanyue/blog/blob/master/post/juejin-interview.md"},
                 {"name": "前端面试图谱", "url": "https://yuchengkai.cn/"},
@@ -136,6 +134,9 @@ def resource(request, name):
                     "url": "https://github.com/biaochenxuying/blog/issues/47"},
                 {"name": "简易前端代码规范", "url": "https://codeguide.bootcss.com/"},
                 {"name": "京东前端代码规范", "url": "https://guide.aotu.io/index.html"},
+                {"name": "Airbnb JS代码规范", "url": "https://github.com/airbnb/javascript#destructuring"},
+                {"name": "Google JS代码规范", "url": "https://google.github.io/styleguide/jsguide.html"},
+                {"name": "idiomatic.js代码规范", "url": "https://github.com/rwaldron/idiomatic.js/tree/master/translations/zh_CN"},
                 {"name": "LeetCode算法题解",
                     "url": "https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution"},
             ]
